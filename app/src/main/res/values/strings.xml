@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TICKR_X</string>
+    <string name="tab_text_1">TICKR X Discover</string>
+    <string name="tab_text_2">TICKR X Connect</string>
+</resources>
