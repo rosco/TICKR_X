@@ -20,7 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service
-            android:name=".ui.main.TICKRXService"
+            android:name=".TICKRXService"
             android:enabled="true"
             android:exported="true"></service>
 

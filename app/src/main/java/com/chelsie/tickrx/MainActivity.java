@@ -9,11 +9,14 @@ import com.google.android.material.tabs.TabLayout;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.chelsie.tickrx.ui.main.SectionsPagerAdapter;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,9 +34,14 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Replace with your own TICKR action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    public void sendMessage(View view) {
+        Log.i("MAIN_TAG", "sendMessage from Discover Button");
+        // Toast.makeText(getApplicationContext(), "sendMessage from Discover Button", Toast.LENGTH_LONG);
     }
 }
