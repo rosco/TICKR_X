@@ -37,11 +37,16 @@ public class TICKRXService extends Service {
         return null;
     }
 
+    private void initWahooHardwareConnector() {
+        com.wahoofitness.common.log.Logger.setLogLevel(Log.INFO);
+        mHardwareConnector = new HardwareConnector (getApplicationContext(), mHardwareConnectorListener);
+    }
+
     @Override
     public void onCreate() {
+        Toast.makeText(getApplicationContext(), "TICKRXService.onCreate()", Toast.LENGTH_LONG).show();
         super.onCreate();
-        com.wahoofitness.common.log.Logger.setLogLevel(Log.VERBOSE);
-        mHardwareConnector = new HardwareConnector(this, mHardwareConnectorListener);
+        initWahooHardwareConnector();
     }
 
     @Override

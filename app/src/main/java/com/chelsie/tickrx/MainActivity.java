@@ -1,5 +1,6 @@
 package com.chelsie.tickrx;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -41,7 +42,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendMessage(View view) {
-        Log.i("MAIN_TAG", "sendMessage from Discover Button");
-        // Toast.makeText(getApplicationContext(), "sendMessage from Discover Button", Toast.LENGTH_LONG);
+        Log.i ("MAIN_TAG", "sendMessage from Discover Button");
+        switch (view.getId()) {
+            case R.id.buttonstartdiscovery:
+                startService(new Intent(this, TICKRXService.class));
+                Toast.makeText(getApplicationContext(), "startService", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.buttonstopdiscovery:
+                stopService(new Intent(this, TICKRXService.class));
+                Toast.makeText(getApplicationContext(), "stopService", Toast.LENGTH_LONG).show();
+                break;
+        }
     }
 }

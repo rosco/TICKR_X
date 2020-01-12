@@ -28,11 +28,18 @@
             android:background="?attr/colorPrimary" />
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
+            android:id="@+id/buttonstartdiscovery"
+            android:layout_width="201dp"
             android:layout_height="wrap_content"
             android:onClick="sendMessage"
-            android:text="@string/discover" />
+            android:text="@string/start_discovery" />
+
+        <Button
+            android:id="@+id/buttonstopdiscovery"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:onClick="sendMessage"
+            android:text="@string/stop_discovery" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
