@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
@@ -28,15 +29,29 @@
             android:background="?attr/colorPrimary" />
 
         <Button
+            android:id="@+id/buttonconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="sendMessage"
+            android:text="@string/connect" />
+
+        <Button
+            android:id="@+id/buttondisconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="sendMessage"
+            android:text="@string/disconnect" />
+
+        <Button
             android:id="@+id/buttonstartdiscovery"
-            android:layout_width="201dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="sendMessage"
             android:text="@string/start_discovery" />
 
         <Button
             android:id="@+id/buttonstopdiscovery"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="sendMessage"
             android:text="@string/stop_discovery" />
@@ -55,4 +70,5 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

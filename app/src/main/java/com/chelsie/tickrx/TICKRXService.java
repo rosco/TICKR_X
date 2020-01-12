@@ -14,7 +14,7 @@ import com.wahoofitness.connector.HardwareConnectorTypes;
 import com.wahoofitness.connector.conn.connections.SensorConnection;
 
 public class TICKRXService extends Service {
-    private HardwareConnector mHardwareConnector;
+    public static HardwareConnector mHardwareConnector;
     private final HardwareConnector.Listener mHardwareConnectorListener = new HardwareConnector.Listener() {
         @Override
         public void onHardwareConnectorStateChanged(@NonNull HardwareConnectorTypes.NetworkType networkType, @NonNull HardwareConnectorEnums.HardwareConnectorState hardwareConnectorState) {
